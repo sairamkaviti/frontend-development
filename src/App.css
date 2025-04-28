@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Gowun+Batang:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ponnala&family=Sacramento&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+ font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+:root {
+  --primary-color: #3498db;
+
+}
+
+/* Login.css */
+
+.login-container {
+  background-color: #f8f9fa;
+   overflow-x: hidden;
+}
+
+.login-left {
+  background: #ffffff;
+  padding: 40px 20px;
+  /* text-align: center; */
+ 
+
+}
+.login-form{
+ display: flex;
+ flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.login-right {
+  background: linear-gradient(135deg, #c6e6e7, #d7eff1);
+  text-align: center;
+}
+
+/* Error border color */
+.border-tomato {
+  border-color: tomato !important;
+}
+
+/* Success border color */
+.border-success {
+  border-color: #28a745 !important;
+}
+
+/* Position the icon on the right side */
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+/* Icon color for error */
+.text-tomato {
+  color: tomato;
+}
+
+/* Icon color for success */
+.text-success {
+  color: #28a745;
+}
+
+
+.forgot-password {
+  font-size: 0.9rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.small-links a {
+  font-size: 0.8rem;
+  margin: 0 5px;
+  color: #6c757d;
+  text-decoration: none;
+}
+
+button.btn-primary {
+  background-color: #77c5c7;
+  border: none;
+}
+
+button.btn-primary:hover {
+  background-color: #5bb4b7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .login-left, .login-right {
+    padding: 20px;
+  }
+}
+
+
+
+.main-container {
+  height: 100vh;
+  overflow: auto;
+}
+
+.left-side {
+  /* height: 100vh; */
+  /* overflow-y: auto; */
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 30px;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 320px;
+ 
+}
+.logo-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;  
+}
+.right-side {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  background: linear-gradient(135deg, #c6e6e7, #d7eff1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 30px;
+}
+
+.right-side img {
+  max-width: 80%;
+  height: auto;
+}
+
+.small-links a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.small-links a:hover {
+  text-decoration: underline;
+}
+
+/* Border Color Based on Validation */
+.error-border {
+  border: 1px solid tomato !important;
+}
+.success-border {
+  border: 1px solid green !important;
+}
+
+/* Icon Styling */
+.input-icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+}
+
+.error-icon {
+  color: tomato;
+}
+.success-icon {
+  color: green;
+}
+.success-icon {
+  transform: translateY(20%);
+}
+
+
+
+
+/* General styling for the side navigation */
+
+
+
+.navLinks {
+  color: white;
+  /* letter-spacing: 1px; */
+  text-decoration: none;
+  font-size: 1rem;
+  padding-left: 10px;
+  /* width: 100%; */
+  height: 60px;
+  /* background-color: gray; */
+  font-weight: 600;
+  /* border: 1px solid black; */
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+}
+.navLinks .sideNavIcons {
+  width: 40px;
+  /* background-color: red; */
+  /* text-align: center; */
+}
+.navLinks:hover {
+  color: rgba(255, 255, 255, 0.674);
+}
+  
+.navLinks:hover {
+  background-color: white;
+  color: #007bff;
+  border-radius: 3px;
+  margin: 1px;
+  transition: all 0.5s ease-in-out;
+}
+.navLinks {
+  margin: 1px;
+}
+
+
+.mainContentDiv {
+  margin-top: 70px;
+  margin-left: 20%;
+  background-color: white;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.leavSalaDDM {
+  top: 40px;
+}
+
+
+.leaveActionForm {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto ;
+  box-shadow: 2px 2px 5px gray;
+  padding:30px;
+  border-radius: 25px;
+  padding: 30px;
+}
+.contentHeading {
+  text-align: center;
+  font-weight: 500;
+  /* text-transform: uppercase; */
+}
+.leaveImg {
+  width: 125px;
+  height: 125px;
+  display: block;
+  margin: 25px auto;
+  border: 1px solid rgba(128, 128, 128, 0.226);
+  border-radius: 50%;
+  padding: 5px;
+  background-color: whitesmoke;
+  filter: drop-shadow(5px 5px 5px black);
+  margin-top: 10px;
+}
+.detailsLabel {
+  width: 120px;
+  display: inline-block;
+  color: #002339af;
+  font-weight: 600;
+  position: relative;
+  /* margin-left: 30px; */
+} 
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.detailsLabel::before {
+  content: ":";
+  position: absolute;
+  right: 10px;
+}
+.empDtataLeaveLabel {
+  margin-left: 10px;
+  color: gray;
+  width: auto;
+
+}
+.leavesChildDiv {
+  margin-block: 15px;
+  /* display: flex; */
+}
+.ppDivEdit{
+  display: flex;
+}
+
+.updateBtn{
+  border: 0;
+  outline: 0;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 10px;
+}
+.forgot-password-link{
+  text-decoration: none;
+}
+.forgot-password-link:hover{
+  text-decoration: underline;
+}
+
+
+/* General body style for full layout */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f1f5f9; /* Soft, premium light grayish-blue */
+}
+
+/* Top Navigation */
+.topNavBar {
+  width: 100%;
+  height: 70px;
+  background: #1e293b; /* Deep slate blue */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  animation: fadeInDown 0.8s ease-in-out;
+  /* position: relative; */
+}
+
+/* Welcome heading */
+.wlcmHead {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Profile container */
+/* Profile container */
+.profileContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Profile picture */
+.profilePic {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: transform 0.3s ease;
+}
+
+/* On hover slightly zoom */
+.profileContainer:hover .profilePic {
+  transform: scale(1.1);
+}
+
+/* Dropdown menu */
+.dropdownMenu {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  display: none;
+  min-width: 160px;
+  z-index: 999; /* Ensures dropdown stays on top */
+}
+
+/* Show dropdown on hover */
+.profileContainer:hover .dropdownMenu {
+  display: block; /* Change to 'block' from 'flex' */
+}
+
+/* Dropdown button styling */
+.dropdownMenu button {
+  background: none;
+  border: none;
+  padding: 12px 16px;
+  text-align: left;
+  width: 100%;
+  font-size: 14px;
+  cursor: pointer;
+  color: #1e293b;
+  transition: background 0.2s;
+}
+
+/* Button hover effect */
+.dropdownMenu button:hover {
+  background-color: #e2e8f0;
+}
+
+.dropIcon {
+  margin-right: 8px;
+}
+
+
+/* Side Navigation */
+.sideNav {
+  width: 230px;
+  height: 100vh;
+  background: #0f172a; /* Dark slate blue (modern) */
+  padding-top: 90px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+/* SS Logo */
+.sideNav img {
+  width: 110px;
+  margin-bottom: 30px;
+}
+
+/* Nav Links */
+.navLinks {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 14px 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.navLinks:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.navLinks.active {
+  background: #334155; /* Highlight for active link */
+  color: #ffffff;
+}
+
+/* Side nav icons */
+.sideNavIcons {
+  font-size: 18px;
+}
+
+/* Animation for TopNav */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* .simple-spinner {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} */
+
+.connectionCard {
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+.connectionCard:hover {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
