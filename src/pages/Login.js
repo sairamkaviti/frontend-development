@@ -70,13 +70,13 @@ function Login() {
      // Store token and user details
      localStorage.setItem("authToken", response.data.token);
      dispatch({ type: "userDetails", data: userData });
-
+localStorage.setItem("userData", JSON.stringify(userData));
      // Fetch users based on state location
-     const state = userData.location.state;
-     const usersResponse = await axios.get(`/users?state=${state}`, {
-       headers: { Authorization: `Bearer ${response.data.token}` },
-     });
-     console.log("Users from same state:", usersResponse.data);
+    //  const state = userData.location.state;
+    //  const usersResponse = await axios.get(`/users?state=${state}`, {
+    //    headers: { Authorization: `Bearer ${response.data.token}` },
+    //  });
+    //  console.log("Users from same state:", usersResponse.data);
 
      Swal.fire({
        icon: "success",

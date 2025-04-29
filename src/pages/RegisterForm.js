@@ -214,7 +214,7 @@ function RegisterForm() {
 
               {/* Name Field */}
               <div className="mb-3 position-relative">
-                <label>Company / Owner Name</label>
+                <label>User Name / Company Name</label>
                 <input
                   type="text"
                   className={getInputClass("name")}

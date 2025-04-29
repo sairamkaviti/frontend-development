@@ -13,7 +13,7 @@ function SideNavBar() {
   return (
     <div>
       <nav className="sideNav">
-        <img src={ssLogo} alt="SS Logo" />
+        {/* <img src={ssLogo} alt="SS Logo" /> */}
 
         <NavLink
           to="/dashboard"
@@ -70,6 +70,45 @@ function SideNavBar() {
         >
           <FaUsersCog className="sideNavIcons" /> Connections
         </NavLink>
+        {/* <NavLink
+          to="/userConnectionsPage"
+          className="navLinks"
+          style={(ele) => {
+            if (ele.isActive) {
+              return {
+                color: "yellow",
+              };
+            }
+          }}
+        >
+          <FaUsersCog className="sideNavIcons" /> User Connections
+        </NavLink>
+        <NavLink
+          to="/requestsRecieved"
+          className="navLinks"
+          style={(ele) => {
+            if (ele.isActive) {
+              return {
+                color: "yellow",
+              };
+            }
+          }}
+        >
+          <FaUsersCog className="sideNavIcons" /> Requests
+        </NavLink>
+        <NavLink
+          to="/myConnections"
+          className="navLinks"
+          style={(ele) => {
+            if (ele.isActive) {
+              return {
+                color: "yellow",
+              };
+            }
+          }}
+        >
+          <FaUsersCog className="sideNavIcons" /> MyConnections
+        </NavLink> */}
 
         <NavLink to="/" className="navLinks">
           <FaSignOutAlt className="sideNavIcons" /> Logout

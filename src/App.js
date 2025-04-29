@@ -11,26 +11,39 @@ import ViewProfile from './pages/ViewProfile';
 import Connections from './pages/Connections';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import Chat from './pages/Chat';
+
+import UserConnectionPage from './pages/UserConnectionPage';
+import ReceivedRequestsPage from './pages/ReceivedRequestsPage';
+import MyConnectionsPage from './pages/MyConnectionsPage';
+import ChatComponent from './pages/ChatComponent';
 
 function App() {
    const dispatch = useDispatch();
 
+   
+
    useEffect(() => {
-     const savedUser = localStorage.getItem("userDetails");
-
+     const savedUser = localStorage.getItem("userData");
      if (savedUser) {
-       // Parse the saved user details from localStorage
-       const parsedUser = JSON.parse(savedUser);
-
-       // Dispatch the user data to Redux store to update the global state
-       dispatch({ type: "userDetails", data: parsedUser });
+       dispatch({ type: "userDetails", data: JSON.parse(savedUser) });
      }
    }, [dispatch]);
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />}></Route>
+        <Route path="/myConnections" element={<MyConnectionsPage />}></Route>
+
+        <Route
+          path="/requestsRecieved"
+          element={<ReceivedRequestsPage />}
+        ></Route>
+
+        <Route
+          path="/userConnectionsPage"
+          element={<UserConnectionPage />}
+        ></Route>
+
         <Route path="/forgotPassword" element={<ForgotPassword />}></Route>
         <Route path="/registerForm" element={<RegisterForm />}></Route>
         <Route path="/navBar" element={<SideNavBar />}></Route>
@@ -38,7 +51,8 @@ function App() {
         <Route path="/editProfile" element={<EditProfile />}></Route>
         <Route path="/viewProfile" element={<ViewProfile />}></Route>
         <Route path="/connections" element={<Connections />}></Route>
-        <Route path="/chat" element={<Chat />}></Route>
+        {/* <Route path="/chat" element={<ChatComponent />}></Route> */}
+        <Route path="/chat/:userId" element={<ChatComponent />} />
       </Routes>
     </BrowserRouter>
   );
