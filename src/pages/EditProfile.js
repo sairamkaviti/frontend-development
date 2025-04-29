@@ -453,7 +453,7 @@ function EditProfile() {
     setValue("state", user.location?.state || "");
     setValue("city", user.location?.city || "");
 
-    axios.defaults.baseURL = "http://localhost:7386";
+    axios.defaults.baseURL = REACT_APP_API_URL;
   }, [user, setValue]);
 
   const updateUserDetails = async (data) => {

@@ -24,11 +24,11 @@ const ChatComponent = () => {
 
   // Connect socket and fetch user/chat data
   useEffect(() => {
-    socketRef.current = io("http://localhost:7386");
+    socketRef.current = io(REACT_APP_API_URL);
     socketRef.current.emit("join", loggedInUser._id);
 
     // Fetch receiver details
-    fetch("http://localhost:7386/api/user/getUserDetails", {
+    fetch("REACT_APP_API_URL/api/user/getUserDetails", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userId }),
@@ -37,7 +37,7 @@ const ChatComponent = () => {
       .then((data) => setReceiverDetails(data));
 
     // Fetch chat history
-    fetch("http://localhost:7386/getChat", {
+    fetch("REACT_APP_API_URL/getChat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ user1: loggedInUser._id, user2: userId }),
@@ -71,7 +71,7 @@ console.log(loggedInUser);
     };
 
     // Save to DB
-    await fetch("http://localhost:7386/send", {
+    await fetch("REACT_APP_API_URL/send", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newMsg),

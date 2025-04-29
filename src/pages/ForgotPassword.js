@@ -17,7 +17,7 @@ function ForgotPassword() {
 
     const onSubmit = async (data) => {
       try {
-        const response = await fetch("http://localhost:7386/forgotPassword", {
+        const response = await fetch("REACT_APP_API_URL/forgotPassword", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

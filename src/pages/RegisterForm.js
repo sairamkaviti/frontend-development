@@ -30,7 +30,7 @@ function RegisterForm() {
 
   useEffect(() => {
     setStates(Object.keys(indiaStatesCities));
-    axios.defaults.baseURL = "http://localhost:7386";
+    axios.defaults.baseURL = REACT_APP_API_URL;
   }, []);
 
   useEffect(() => {

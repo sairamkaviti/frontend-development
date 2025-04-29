@@ -108,7 +108,7 @@ localStorage.setItem("userData", JSON.stringify(userData));
  };
 
   useEffect(() => {
-    axios.defaults.baseURL = "http://localhost:7386";
+    axios.defaults.baseURL = REACT_APP_API_URL;
   }, []);
 
   return (
