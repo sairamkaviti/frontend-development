@@ -24,11 +24,11 @@ const ChatComponent = () => {
 
   // Connect socket and fetch user/chat data
   useEffect(() => {
-    socketRef.current = io(REACT_APP_API_URL);
+    socketRef.current = io(process.env.REACT_APP_API_URL);
     socketRef.current.emit("join", loggedInUser._id);
 
     // Fetch receiver details
-    fetch("REACT_APP_API_URL/api/user/getUserDetails", {
+    fetch("process.env.REACT_APP_API_URL/api/user/getUserDetails", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userId }),
@@ -37,7 +37,7 @@ const ChatComponent = () => {
       .then((data) => setReceiverDetails(data));
 
     // Fetch chat history
-    fetch("REACT_APP_API_URL/getChat", {
+    fetch("process.env.REACT_APP_API_URL/getChat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ user1: loggedInUser._id, user2: userId }),
@@ -55,7 +55,7 @@ const ChatComponent = () => {
         setMessages((prev) => [...prev, data]);
       }
     });
-console.log(loggedInUser);
+    console.log(loggedInUser);
     return () => {
       socketRef.current.disconnect();
     };
@@ -71,7 +71,7 @@ console.log(loggedInUser);
     };
 
     // Save to DB
-    await fetch("REACT_APP_API_URL/send", {
+    await fetch("process.env.REACT_APP_API_URL/send", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newMsg),

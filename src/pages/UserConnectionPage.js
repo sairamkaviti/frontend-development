@@ -15,7 +15,7 @@ function UserConnectionPage() {
   const [sentRequests, setSentRequests] = useState([]); // pending requests
 
   useEffect(() => {
-    axios.defaults.baseURL = REACT_APP_API_URL;
+    axios.defaults.baseURL = process.env.REACT_APP_API_URL;
     fetchAllData();
   }, []);
 

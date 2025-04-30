@@ -24,7 +24,7 @@ function ViewProfile() {
           <img
             src={
               user && user.profilePic
-                ? `REACT_APP_API_URL/${user.profilePic}`
+                ? `process.env.REACT_APP_API_URL/${user.profilePic}`
                 : profilePic
             }
             className="leaveImg"

@@ -21,7 +21,7 @@ function MyConnectionsPage() {
   };
 
   useEffect(() => {
-    axios.defaults.baseURL = REACT_APP_API_URL;
+    axios.defaults.baseURL = process.env.REACT_APP_API_URL;
     getMyConnections();
   }, []);
 

@@ -17,13 +17,16 @@ function ForgotPassword() {
 
     const onSubmit = async (data) => {
       try {
-        const response = await fetch("REACT_APP_API_URL/forgotPassword", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email: data.email }),
-        });
+        const response = await fetch(
+          "process.env.REACT_APP_API_URL/forgotPassword",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email: data.email }),
+          }
+        );
 
         const result = await response.json();
         if (response.ok) {
